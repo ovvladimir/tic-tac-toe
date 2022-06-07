@@ -1,5 +1,6 @@
 from tkinter import Tk, Frame, Button, NORMAL, DISABLED, E, W, S, N
 
+p = ' \u2007 '
 sim = [' x ', ' o ']
 ls = ('b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9')
 s = E + W + S + N
@@ -24,7 +25,7 @@ def f(a):
     sim.reverse()
     for n, m in enumerate(ls):
         z = fr.nametowidget(m)
-        lst.append(n) if z['text'] == ' \u2007 ' else lst.append(z['text'])
+        lst.append(n) if z['text'] == p else lst.append(z['text'])
     if check(lst):
         for k in ls:
             fr.nametowidget(k)['state'] = DISABLED
@@ -35,7 +36,7 @@ def sym(e):
     if e.keysym == 'Return':
         for k in ls:
             u = fr.nametowidget(k)
-            u.config(text=' \u2007 ', state=NORMAL, bg='white')
+            u.config(text=p, state=NORMAL, bg='white')
         sim[0], sim[1] = ' x ', ' o '
 
 
@@ -45,7 +46,7 @@ tk.overrideredirect(True)
 fr = Frame(tk, bg='#6495ED', bd=4)
 fr.pack()
 [Button(
-    fr, text=' \u2007 ', font='arial 50', bg='white', name=j, command=lambda j=j: f(fr.nametowidget(j))
+    fr, text=p, font='arial 50', bg='white', name=j, command=lambda j=j: f(fr.nametowidget(j))
 ).grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1, sticky=s) for i, j in enumerate(ls)]
 # tk.nametowidget(j) если нет Frame
 """
