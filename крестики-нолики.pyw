@@ -12,7 +12,7 @@ def check(lt):
     for crd in coord:
         if lt[crd[0]] == lt[crd[1]] == lt[crd[2]]:
             for g, h in enumerate(ls):
-                if g == crd[0] or g == crd[1] or g == crd[2]:
+                if g in {crd[0], crd[1], crd[2]}:
                     fr.nametowidget(h)['bg'] = 'red'
             return True
     return False
