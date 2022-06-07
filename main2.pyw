@@ -46,7 +46,7 @@ tk.overrideredirect(True)
 fr = Frame(tk, bg='#6495ED', bd=4)
 fr.pack()
 [Button(
-    fr, text=p, font='arial 50', bg='white', name=j, command=lambda j=j: f(fr.nametowidget(j))
+    fr, text=p, font='arial 50', bg='white', name=j, command=lambda r=j: f(fr.nametowidget(r))
 ).grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1, sticky=s) for i, j in enumerate(ls)]
 # tk.nametowidget(j) если нет Frame
 """
