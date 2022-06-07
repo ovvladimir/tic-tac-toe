@@ -28,7 +28,7 @@ tk.overrideredirect(True)
 fr = Frame(tk, bg='#6495ED', bd=4)
 fr.pack()
 for i in range(9):
-    lst.append(Button(fr, text=p, font='arial 50', bg='white'))
+    lst.append(Button(fr, text=p, font='arial 48', bg='white'))
     lst[i].grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1, sticky='nsew')
     lst[i]['command'] = lambda j=i: f(lst[j])
 
