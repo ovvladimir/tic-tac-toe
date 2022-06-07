@@ -9,7 +9,7 @@ def check(lt):
              (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
     for crd in coord:
         if lt[crd[0]] == lt[crd[1]] == lt[crd[2]]:
-            [lst[crd[g]].config(bg='red') for g in range(3)]
+            [lst[g].config(bg='red') for g in crd]
             [d.config(state=DISABLED) for d in lst]
 
 
