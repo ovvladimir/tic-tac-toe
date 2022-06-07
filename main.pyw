@@ -30,7 +30,7 @@ fr.pack()
 for i in range(9):
     lst.append(Button(fr, text=p, font='arial 50', bg='white'))
     lst[i].grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1, sticky='nsew')
-    lst[i]['command'] = lambda i=i: f(lst[i])
+    lst[i]['command'] = lambda j=i: f(lst[j])
 
 tk.bind('<Key>', sym)
 tk.eval('tk::PlaceWindow . center')
