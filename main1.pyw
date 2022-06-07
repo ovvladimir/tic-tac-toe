@@ -3,11 +3,11 @@ from tkinter import Tk, Frame, Button, NORMAL, DISABLED
 p = ' \u2007 '
 sim = [' x ', ' o ']
 lst, ls = [], []
+coord = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6),
+         (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
 
 
 def check(lt):
-    coord = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6),
-             (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
     for crd in coord:
         if lt[crd[0]] == lt[crd[1]] == lt[crd[2]]:
             [lst[g].config(bg='red') for g in crd]
