@@ -23,7 +23,7 @@ def sym(e):
 
 
 tk = Tk()
-tk.overrideredirect(True)
+tk.overrideredirect(True)  # for Linux - tk.attributes('-type', 'splash')
 
 fr = Frame(tk, bg='#6495ED', bd=4)
 fr.pack()
