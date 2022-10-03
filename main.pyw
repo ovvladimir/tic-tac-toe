@@ -11,7 +11,7 @@ def f(a):
     sim.reverse()
     for crd in coord:
         if lst[crd[0]]['text'] == lst[crd[1]]['text'] == lst[crd[2]]['text'] != p:
-            [lst[x].config(bg='red') for x in crd]
+            [lst[x].config(disabledforeground='red') for x in crd]
             [y.config(state=DISABLED) for y in lst]
 
 
