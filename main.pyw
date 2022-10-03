@@ -18,7 +18,7 @@ def f(a):
 def sym(e):
     tk.destroy() if e.keysym == 'Escape' else None
     if e.keysym == 'Return':
-        [z.config(text=p, state=NORMAL, disabledforeground='SystemDisabledText') for z in lst]
+        [z.config(text=p, state=NORMAL, disabledforeground='black') for z in lst]
         sim[0], sim[1] = ' x ', ' o '
 
 
@@ -28,7 +28,7 @@ tk.overrideredirect(True)  # for Linux - tk.attributes('-type', 'splash')
 fr = Frame(tk, bg='#6495ED', bd=4)
 fr.pack()
 for i in range(9):
-    lst.append(Button(fr, text=p, font='arial 48', bg='white'))
+    lst.append(Button(fr, text=p, font='arial 48', disabledforeground='black'))
     lst[i].grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1, sticky='nsew')
     lst[i]['command'] = lambda j=i: f(lst[j])
 
