@@ -18,7 +18,7 @@ def f(a):
 def sym(e):
     tk.destroy() if e.keysym == 'Escape' else None
     if e.keysym == 'Return':
-        [z.config(text=p, state=NORMAL, bg='white') for z in lst]
+        [z.config(text=p, state=NORMAL, disabledforeground='SystemDisabledText') for z in lst]
         sim[0], sim[1] = ' x ', ' o '
 
 
