@@ -41,7 +41,7 @@ for i in range(9):
     lst.append(Button(
         fr, text=p, image=pixelVirtual, font='arial 72',
         width=200, height=200, compound=CENTER, disabledforeground='black'))
-    lst[i].grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1, sticky='nsew')
+    lst[i].grid(row=i // 3 + 1, column=i % 3, padx=1, pady=1)
     lst[i]['command'] = lambda j=i: play(lst[j])
 
 cnv = Canvas(tl, bg=color)
