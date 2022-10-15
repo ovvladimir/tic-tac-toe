@@ -2,7 +2,6 @@ from tkinter import Tk, Frame, Button, Toplevel, Canvas, PhotoImage, \
     CENTER, BOTH, NORMAL, DISABLED
 from time import sleep
 from random import choice
-from tkinter.messagebox import NO
 
 p, dt, color = ' ', 40, '#6495ED'
 sim, lst, moveO = ['X', 'O'], [], [None]
