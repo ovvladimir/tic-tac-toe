@@ -65,6 +65,7 @@ def back(e) -> None:
         tk.attributes('-topmost', 1)
         cnv.delete('all')
         coord_keys[:] = [*map(list, list(coord.keys()))]
+        moveO[0] = None
 
 
 tk = Tk()
