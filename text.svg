@@ -7,7 +7,7 @@
         <animate attributeName='d' begin='0s;d0.end' dur='6000ms' fill='remove'
             values='m0,25 h0 ; m0,25 h350 ; m0,25 h350 ; m0,25 h0' keyTimes='0;0.66666666666667;0.83333333333333;1' />
     </path>
-    <text font-family='"monospace", monospace' fill='#2526F7' font-size='30' dominant-baseline='auto' x='0%' text-anchor='start'>
+    <text font-family='"monospace", monospace' fill='#2526F7' font-size='30' dominant-baseline='auto' x='0%' text-anchor='middle'>
         <textPath xlink:href='#pth'>
             Личный сайт кота Шока
         </textPath>
